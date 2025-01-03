@@ -15,12 +15,3 @@ def calculator():
             elif operation == '*':
                 print(f'Result: {num1 * num2}')
             elif operation == '/':
-                if num2 != 0:
-                    print(f'Result: {num1 / num2}')
-                else:
-                    print("Error: Division by zero.")
-        else:
-            print("Invalid operation. Please try again.")
-
-if __name__ == '__main__':
-    calculator()
