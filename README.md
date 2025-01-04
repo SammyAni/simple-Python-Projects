@@ -14,4 +14,4 @@ def calculator():
                 print(f'Result: {num1 - num2}')
             elif operation == '*':
                 print(f'Result: {num1 * num2}')
-            elif operation == '/':
+            
