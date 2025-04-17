@@ -4,11 +4,13 @@
 import decimal
 
 def pi_digits(precision):
-    """
-    Calculates pi to the specified number of decimal places using the Chudnovsky algorithm.
-    """
-    decimal.getcontext().prec = precision + 1  # Set the precision for decimal calculations
 
+    """ Calculates pi to the specified number of decimal places using the Chudnovsky algorithm """
+    
+    decimal.getcontext().prec = precision + 1 
+    
+    # Set the precision for decimal calculations
+    
     C = 426880 * decimal.Decimal(10005).sqrt()
     L = 13591409
     X = 1
@@ -25,9 +27,10 @@ def pi_digits(precision):
 
     pi = C / S
     return pi
-
+    
 def main():
     # Get user input for the number of digits of pi to generate
+    
     while True:
         try:
             precision = int(input("Enter the number of digits of pi to generate (up to 1,000,000): "))
@@ -50,8 +53,7 @@ def main():
         f.write(str(pi_value))
 
     print(f"Pi digits saved to 'pi_digits.txt'.")
-
-if __name__ == "__main__":
+    if __name__ == "__main__":
     main()
-!python calculate_pi.py
+    !python calculate_pi.py
   
